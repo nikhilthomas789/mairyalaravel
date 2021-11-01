@@ -1,0 +1,64 @@
+
+.iconactive
+{
+    background-color: green;
+    border-radius: 4px;
+    color: white;
+    width: 36px;
+    height: 17px;
+    padding: 3px;
+    text-align: center;
+}
+.iconinactive
+{
+	background-color: #e02c2c;
+    border-radius: 4px;
+    color: white;
+    width: 36px;
+    height: 17px;
+    padding: 3px;
+    text-align: center;	
+}
+
+.iconstatusonline{
+  background-color: #42b72a;
+    border-radius: 88px;
+    color: #42b72a;
+    text-align: center;
+    padding: 2px;
+}
+
+
+.iconstatusoffline{
+  background-color: #ada1a1;
+    border-radius: 88px;
+    color: #ada1a1;
+    text-align: center;
+    padding: 2px;
+}
+
+    
+
+
+
+
+th 
+{
+	text-align:center
+}
+
+.fa-2x {
+    font-size: 1.7em;
+}
+
+.fa-trash
+{
+	color: #db4339;
+}
+
+
+.imageadmin
+{
+    width: 100px;
+    height: auto;
+}

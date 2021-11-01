@@ -1,0 +1,170 @@
+
+.iconactive
+{
+    background-color: green;
+    border-radius: 4px;
+    color: white;
+    width: 36px;
+    height: 20px;
+    padding: 3px;
+    text-align: center;
+}
+.iconinactive
+{
+	background-color: #e02c2c;
+    border-radius: 4px;
+    color: white;
+    width: 36px;
+    height: 20px;
+    padding: 3px;
+    text-align: center;	
+}
+
+.testdriverequest{
+    background-color:#ff5e00;
+    border-radius: 4px;
+    color: white;
+    width: 55px;
+    height: 20px;
+    padding: 2px 15px;
+    text-align: center;
+}
+.informationrequest{
+    background-color: #4b3dc3;
+    border-radius: 4px;
+    color: white;
+    width: 55px;
+    height: 20px;
+    padding: 2px 15px;
+    text-align: center;
+}
+
+.offerrequest{
+    background-color: #d80c0c;
+    border-radius: 4px;
+    color: white;
+    width: 55px;
+    height: 20px;
+    padding: 2px 15px;
+    text-align: center;
+}
+
+
+.friendrequest {
+    background-color: #4e4927;
+    border-radius: 4px;
+    color: white;
+    width: 55px;
+    height: 20px;
+    padding: 2px 15px;
+    text-align: center;
+}
+
+.emailrequest{
+    background-color: #00abec;
+    border-radius: 4px;
+    color: white;
+    width: 55px;
+    height: 20px;
+    padding: 2px 15px;
+    text-align: center;
+}
+
+
+.iconstatusonline{
+  background-color: #42b72a;
+    border-radius: 88px;
+    color: #42b72a;
+    text-align: center;
+    padding: 2px;
+}
+
+
+.iconstatusoffline{
+  background-color: #ada1a1;
+    border-radius: 88px;
+    color: #ada1a1;
+    text-align: center;
+    padding: 2px;
+}
+
+    
+
+
+
+
+th 
+{
+	text-align:center
+}
+
+.fa-2x {
+    font-size: 1.7em;
+}
+
+.fa-trash
+{
+	color: #db4339;
+}
+
+
+.imageadmin
+{
+    width: 100px;
+    height: auto;
+}
+
+gx-wrapper {
+    width: 100%;
+    flex: 1;
+    margin-bottom: 24px;
+}
+.page-error-container {
+    padding: 30px 0;
+    position: relative;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    height: 100%;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+.page-error-content {
+    margin: 0 auto;
+    padding: 40px 0;
+    width: 100%;
+    max-width: 94%;
+}
+
+
+.error-code {
+
+    color: #212529;
+    font-size: 160px;
+    text-align: center;
+    line-height: 1;
+    font-weight: 600;
+    text-shadow: 10px 6px 8px rgba(117, 117, 117, 0.8);
+
+}
+.page-error-content h2 {
+    margin-bottom: 50px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}

@@ -1,0 +1,59 @@
+@extends('admin.dashboard')
+@section('content')
+<div class="row gutters">
+   <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+      <div class="card">
+         <div class="card-header">Usergroup List <a class="btn btn-outline-primary pull-right" href='{{ url('/admin/photo/create/')}}'>Add new</a></div>
+         <div class="card-body table-responsive">
+            <table id="basicExample" class="table table-striped table-bordered">
+               <thead>
+                  <tr>
+                     <th>Sl.no</th>
+                    
+                     <th>Name</th>
+                      <th>Image</th>
+                     <th>Status</th>
+                     <th>Edit</th>
+                     <th>Delete</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  @if($data)
+                  @php $i=1;@endphp
+                  @foreach($data as $value)
+
+                  <tr class="text-center">
+                     <td >{{$i}}</td>
+                     
+                     <td>{{$value['name']}}</td>
+                      <td>
+                        <img src="{{ url('assets/uploads/').'/'.$value['image'] }}" class="imageadmin">
+                      </td>
+                      @if($value['status']=="1")
+                     <td>
+                        <a href="status/{{$value['id']}}" data-toggle="tooltip" title="Click here to deactivate"><i class="fa fa-check iconactive" aria-hidden="true"></i></a>
+                     </td>
+                     @else
+                     <td>
+                        <a href="status/{{$value['id']}}" data-toggle="tooltip" title="Click here to activate"><i class="fa fa-check iconinactive" aria-hidden="true"></i></a>
+                     </td>
+
+                      @endif
+
+
+                    
+
+                     <td><a href="create/{{$value['id']}}" data-toggle="tooltip" title="Click here to edit"><i class="fa fa-edit fa-2x"></a></td>
+                        <input type="hidden" value="{{$value['id']}}" class="delval">
+                     <td><a href="delete/{{$value['id']}}" data-toggle="tooltip" title="Click here to Delete" onclick="return confirm('Are you sure you want to delete?')"><i class="fa fa-trash fa-2x"></a></td>
+                  </tr>
+                  @php $i++;@endphp
+                  @endforeach
+                  @endif
+               </tbody>
+            </table>
+         </div>
+      </div>
+   </div>
+</div>
+@endsection
