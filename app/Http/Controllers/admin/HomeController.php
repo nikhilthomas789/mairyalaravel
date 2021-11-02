@@ -33,7 +33,7 @@ class HomeController extends Controller
         $data['usercount']=count(DB::table('users')->where('status',1)->get());
         $data['enquirycount']=count(DB::table('contact')->get());
         $data['headcount']=count(DB::table('head')->get());
-        $data['partycount']=count(DB::table('creditors')->get());
+        // $data['partycount']=count(DB::table('creditors')->get());
 
 
 

@@ -52,14 +52,14 @@ Route::post('/user/create','admin\UserController@create')->name("User");
 
 
 
-/*Backlinks */
-Route::post('/creditors/create','admin\CreditorsController@create')->name("creditors");
-Route::get('/creditors/create','admin\CreditorsController@create')->name("creditors");
-Route::get('/creditors/create/{id}','admin\CreditorsController@create')->name("creditors");
-Route::post('/creditors/create/{id}','admin\CreditorsController@create')->name("creditors");
-Route::get('/creditors/list','admin\CreditorsController@list')->name("creditors");
-Route::get('/creditors/status/{id}','admin\CreditorsController@status')->name("creditors");
-Route::get('/creditors/delete/{id}','admin\CreditorsController@delete')->name("creditors");
+/*Customer */
+Route::post('/customer/create','admin\CustomerController@create')->name("Customer");
+Route::get('/customer/create','admin\CustomerController@create')->name("Customer");
+Route::get('/customer/create/{id}','admin\CustomerController@create')->name("Customer");
+Route::post('/customer/create/{id}','admin\CustomerController@create')->name("Customer");
+Route::get('/customer/list','admin\CustomerController@list')->name("Customer");
+Route::get('/customer/status/{id}','admin\CustomerController@status')->name("Customer");
+Route::get('/customer/delete/{id}','admin\CustomerController@delete')->name("Customer");
 
 
 
