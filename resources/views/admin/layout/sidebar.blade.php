@@ -26,16 +26,43 @@ if(count($menusrights)>0){
          <button class="user-img">
             <img src="{{ asset('/assets/uploads/users/'.Auth::user()->icon)}}" alt="">
             <ul class="user-dropdown">
-               <li class="active"><a href="#">Profile Information</a></li>
+               <li>
+                  <div class="profile-dtl">
+                     <img src="{{ asset('/assets/uploads/users/'.Auth::user()->icon)}}" alt="">
+                     <h4>
+                        {{Auth::user()->name}}
+                     </h4>
+                  </div>
+               </li>
+               <li><a href="#">Profile Information</a></li>
                <li><a href="#">Change Password</a></li>
                <li>
                   <a href="{{ url('/admin/logout') }}"><i class="fa fa-sign-out"></i> Logout</a>
                </li>
             </ul>
          </button>
+
+         <ul class="social">
+            <li>
+               <a href="">
+                  <i class="fa fa-facebook-f"></i>
+               </a>
+            </li>
+            <li>
+               <a href="">
+                  <i class="fa fa-instagram"></i>
+               </a>
+            </li>
+         </ul>
       </div>
 
       <div class="navigation-menu-body " tabindex="3" style="overflow: hidden; outline: none;">
+         <div class="logo-warp">
+            <a href="#" class="logo">
+               <img src="{{ asset('/assets/img/logo.png') }}" alt="" class="main-logo" />
+               <img src="{{ asset('/assets/img/short-logo.jpg') }}" alt="" class="short-logo" />
+            </a>
+         </div>
          <div class="side-nav">
             <ul class="adminMenu" id="adminMenu">
                <li>

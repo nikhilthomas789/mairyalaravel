@@ -9,12 +9,12 @@
             <i class="icon-chevron-thin-left"></i>
             </a>
          </div>
-         <div class="block">
+         <!-- <div class="block">
             <a href="#" class="logo">
             <img src="{{ asset('/assets/img/logo.png') }}" alt="" />
             </a>
-         </div>
-         <div class="block" style="float: right;flex: 1;">
+         </div> -->
+         <div class="block " style="float: right;flex: 1;">
             <ul class="header-actions">
                <li class="dropdown">
                   <a href="#" id="userSettings" class="user-settings" data-toggle="dropdown" aria-haspopup="true">

@@ -55,6 +55,7 @@
                         </div>
                         <div class="page-title">
                            <h5>{{Route::currentRouteName()}}</h5>
+                           
                         </div>
                      </div>
                      
