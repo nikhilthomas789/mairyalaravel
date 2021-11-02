@@ -22,7 +22,7 @@
 <div class="row gutters">
    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
       <div class="card">
-         <div class="card-header">Purchase entry List <a class="btn btn-outline-primary pull-right" href='{{ url('/admin/purchasereturn/create/')}}'>Add new</a></div>
+         <div class="card-header">Purchase entry List <a class="btn btn-outline-primary pull-right btn-sm" href='{{ url('/admin/purchasereturn/create/')}}'>Add new</a></div>
          <div class="card-body table-responsive">
             <table id="basicExample" class="table table-striped table-bordered">
                <thead>

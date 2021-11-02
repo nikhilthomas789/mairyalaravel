@@ -17,7 +17,7 @@
 
 <div class="col-md-12 col-sm-12">
   <div class="card">
-     <div class="card-header">Add Purchase Return <a class="btn btn-outline-primary pull-right" href='{{ url('/admin/purchasereturn/list/')}}'>List all</a></div>
+     <div class="card-header">Add Purchase Return <a class="btn btn-outline-primary pull-right btn-sm" href='{{ url('/admin/purchasereturn/list/')}}'>List all</a></div>
      <div class="card-body">
 
         {{ Form::open(['novalidate','enctype'=>'multipart/form-data']) }}

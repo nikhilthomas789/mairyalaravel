@@ -14,7 +14,7 @@
 
 <div class="col-md-6 col-sm-12 offset-md-3">
   <div class="card">
-     <div class="card-header">Add Models <a class="btn btn-outline-primary pull-right" href='{{ url('/admin/models/list/')}}'>List all</a></div>
+     <div class="card-header">Add Models <a class="btn btn-outline-primary pull-right btn-sm" href='{{ url('/admin/models/list/')}}'>List all</a></div>
      <div class="card-body">
 
         {{ Form::open(['novalidate','enctype'=>'multipart/form-data']) }}

@@ -29,7 +29,7 @@ if(count($menusrights)>0){
                <li class="active"><a href="#">Profile Information</a></li>
                <li><a href="#">Change Password</a></li>
                <li>
-                  <a href=""><i class="fa fa-sign-out"></i> Logout</a>
+                  <a href="{{ url('/admin/logout') }}"><i class="fa fa-sign-out"></i> Logout</a>
                </li>
             </ul>
          </button>

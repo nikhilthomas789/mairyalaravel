@@ -22,7 +22,7 @@
 <div class="row gutters">
    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
       <div class="card">
-         <div class="card-header">Ledger<a class="btn btn-outline-primary pull-right" href='{{ url('/admin/purchaseentry/create/')}}'>Add new</a></div>
+         <div class="card-header">Ledger<a class="btn btn-outline-primary pull-right btn-sm" href='{{ url('/admin/purchaseentry/create/')}}'>Add new</a></div>
 
            <div class="card">
              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">

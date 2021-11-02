@@ -2,7 +2,7 @@
 @section('content')
 <div class="col-md-12 col-sm-12">
    <div class="card">
-      <div class="card-header">View more information requested details <a class="btn btn-outline-primary pull-right" href='{{ url('/admin/vehicle/moreinfo/')}}/{{$data->v_id}}'>List all</a></div>
+      <div class="card-header">View more information requested details <a class="btn btn-outline-primary pull-right btn-sm" href='{{ url('/admin/vehicle/moreinfo/')}}/{{$data->v_id}}'>List all</a></div>
       <div class="card-body">
           <div class="row"> 
            <div class="col-md-6 col-sm-12">
