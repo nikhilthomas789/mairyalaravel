@@ -587,6 +587,15 @@ hr {
     font-size: 0.8rem;
     color: #aab3c3;
 }
+.page-title.with-breadcrumb{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+.page-title.with-breadcrumb .breadcrumb{
+    margin: 0;
+}
 
 .main-heading .right-actions {
     float: right;
@@ -808,7 +817,7 @@ form .f-.spl-label {
 
 .navigation .navigation-menu-tab {
     background-color: var(--orange);
-    width: 80px;
+    width: 60px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
@@ -868,23 +877,32 @@ form .f-.spl-label {
 
 .user-img:focus .user-dropdown,
 .user-img:active .user-dropdown {
-    transform: translate(0, 20px);
+    transform: translate(0, -20px);
     opacity: 1;
     visibility: visible;
+    -webkit-transform: translate(0, -20px);
+    -moz-transform: translate(0, -20px);
+    -ms-transform: translate(0, -20px);
+    -o-transform: translate(0, -20px);
 }
 .user-img .user-dropdown {
     position: absolute;
-    top: 60px;
+    top: 100px;
     left: 5px;
     background: #ffffff;
     width: 100%;
-    border-radius: 4px;
+    border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
     text-align: left;
     opacity: 0;
     visibility: hidden;
     transition: 0.3s ease;
     z-index: 10;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    overflow: hidden;
 }
 .user-img .user-dropdown:before {
     content: "";
@@ -930,6 +948,7 @@ form .f-.spl-label {
     margin: 0;
     text-transform: uppercase;
     font-weight: 700;
+    color: var(--white-color);
 }
 .user-img .user-dropdown li {
     z-index: 1;
@@ -1326,6 +1345,7 @@ form .f-.spl-label {
 .side-nav .adminMenu > li {
     position: relative;
     background: #ffffff;
+    margin-bottom: 7px;
 }
 
 .side-nav .adminMenu > li.selected:after {
@@ -1471,7 +1491,7 @@ form .f-.spl-label {
         left: 0;
     }
     .app-side.is-mini ~ .app-main {
-        margin-left: 140px;
+        margin-left: 125px;
     }
     .app-side.is-mini .adminMenu > li.selected:after {
         border-right: 11px solid transparent;
@@ -5610,7 +5630,7 @@ a.blog-sm p.blog-date:after {
 /*************** Breadcrumbs ***************/
 
 .breadcrumb {
-    background-color: #f5f6fa;
+    background-color: var(--white-color);
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;
@@ -6005,7 +6025,7 @@ select.form-control:not([size]):not([multiple]) {
 .pageContTitle {
     display: flex;
     align-items: center;
-    padding: 15px 0;
+    padding: 0px 0;
 }
 input:-webkit-autofill {
     background-color: #fff !important;

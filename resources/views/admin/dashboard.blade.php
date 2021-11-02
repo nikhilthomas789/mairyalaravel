@@ -32,7 +32,7 @@
             <header class="main-heading">
                <div class="container-fluid">
                   <div class="row">
-                     <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 pageContTitle">
+                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pageContTitle">
                         <div class="page-icon">
 
                      @if(Route::currentRouteName()=="Dashboard")
@@ -53,9 +53,14 @@
                         <i class="fa fa-bank fa-fw"></i>
                             @endif
                         </div>
-                        <div class="page-title">
+                        <div class="page-title with-breadcrumb">
                            <h5>{{Route::currentRouteName()}}</h5>
-                           
+                           <nav aria-label="breadcrumb">
+                              <ol class="breadcrumb">
+                                 <li class="breadcrumb-item"><a href="#"><i class="fa fa-home"></i> Dashboard</a></li>
+                                 <li class="breadcrumb-item active" aria-current="page">Home</li>
+                              </ol>
+                           </nav>
                         </div>
                      </div>
                      
