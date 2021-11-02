@@ -18,17 +18,17 @@
             <div class="line6"></div>
          </div> -->
 <!--loader ends-->
-      </div>
       <div class="app-wrap">
 <!-- Header session starts-->
-      @include('admin.layout.header')
+      
 <!-- Header session ends-->
 
-      <div class="app-container">
+      <div class="app-container" id="main">
 <!-- Sidemenu session starts-->
       @include('admin.layout.sidebar')
 <!-- Sidemenu session ends-->
-         <div class="app-main">
+         <div class="app-main main-content">
+         @include('admin.layout.header')
             <header class="main-heading">
                <div class="container-fluid">
                   <div class="row">
@@ -61,13 +61,17 @@
                   </div>
                </div>
             </header>
-            <div class="main-content">
+            <div>
 
                @yield('content')
+
+               @include('admin.layout.footer')
             </div>
+
+            
          </div>
 <!-- footer session starts-->
-      @include('admin.layout.footer')
+      
 <!-- footer session ends-->
 
       </div>

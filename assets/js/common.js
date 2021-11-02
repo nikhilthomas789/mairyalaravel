@@ -78,3 +78,4 @@ $('.task-list').on('click', 'li.list', function() {
 $(function() {
 	$("#loading-wrapper").fadeOut(5000);
 });
+

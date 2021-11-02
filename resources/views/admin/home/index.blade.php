@@ -1,6 +1,23 @@
 @extends('admin.dashboard')
 @section('content')
 
+<div class="main-wrapper">
+            <div class="page-header"> 
+                <div class="left">
+                    <h1>
+                        CRM System 
+                    </h1>
+                </div>
+                <div class="right">
+                    <ul>
+                        <li>
+                            <i class="fa fa-dashboard"></i> 
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
 
 <div class="row gutters">
 							

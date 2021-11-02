@@ -1,4 +1,4 @@
-<header class="app-header">
+<header class="app-header header">
    <div class="container-fluid">
       <div class="row gutters">
          <div class="block">

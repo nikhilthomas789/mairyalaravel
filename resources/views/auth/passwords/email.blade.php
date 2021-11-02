@@ -21,9 +21,54 @@
 
     </head>  
 
-    <body class="login-bg">
+    <body>
             
-        <div class="container">
+        <div class="login-wrap">
+            <div class="login-contanier">
+                <div class="img-box">
+                    <img src="{{ asset('/assets/img/logo.png')}}" alt="#" />
+                </div>
+                <div class="body">
+                <form class="form-horizontal" method="POST" action="{{ route('password.email') }}" novalidate>
+                        {{ csrf_field() }}                       
+                        <div >
+                            <div class="row no-gutters">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                    <div class="login-box">                                        
+                                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                                            <input id="email" type="email" class="spl-input" name="email" value="{{ old('email') }}" required>
+                                                <label for="email" class="spl-label">E-Mail Address</label>
+
+                                                @if ($errors->has('email'))
+                                                    <span class="help-block error">
+                                                        <strong>{{ $errors->first('email') }}</strong>
+                                                    </span>
+                                                @endif
+                                        </div>
+                                        
+                                        <div class="form-group ">                           
+                                            <button type="submit" class="material-button b-success">
+                                                Send Password Reset Link
+                                            </button>
+                                            <a href="{{url('/')}}/"class="material-button b-primary">
+                                                Back to Login
+                                            </a>
+                                        </div>
+                                        @if (session('status'))
+                                            <div class="alert alert-success messagearea" id="msg1" role="alert">
+                                                {{ session('status') }}
+                                            </div>
+                                        @endif
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    
+        <!-- <div class="container">
             <div class="login-screen">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                    
@@ -73,13 +118,6 @@
                         </div>
                     @endif
 
-
-                                        
-                                    
-                                       {{--  <div class="or"></div>
-                                        <div class="mt-4">
-                                            <a href="signup.html" class="additional-link">Don't have an Account? <span>Create Now</span></a>
-                                        </div> --}}
                                     </div>
                                 </div>
                             </div>
@@ -87,16 +125,14 @@
                     </form>
                 </div>
             </div>
-        </div>
-        <footer class="main-footer no-bdr fixed-btm">
-            <div class="container">
-               SEO WORK MANAGEMENT APPLICATION
-            </div>
-        </footer>
+        </div> -->
+
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="{{ asset('/assets/js/custom.js') }}"></script>
         <script>
-$('#msg1').delay(6000).slideUp('600'); 
-</script>
+        $('#msg1').delay(6000).slideUp('600'); 
+        </script>
 
 
     </body>

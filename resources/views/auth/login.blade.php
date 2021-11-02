@@ -22,9 +22,56 @@
 
     </head>  
 
-    <body class="login-bg">
+    <body>
+
+    <div class="login-wrap">
+        <div class="login-contanier">
+            <div class="img-box">
+                <img src="{{ asset('/assets/img/logo.png')}}" alt="#" />
+            </div>
+            <div class="body">
+                <form method="POST" action="{{ url('/') }}/" novalidate>
+                         @csrf
+                        <div >
+                            <div class="row no-gutters">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                    <div>
+                                        <div class="input-group">
+                                             <input id="username" type="text" class="spl-input{{ $errors->has('username') ? ' is-invalid' : '' }}" name="username" value="{{ old('username') }}" required autofocus>
+                                             <label class="f-label spl-label">Username</label>
+                                              @if ($errors->has('username'))
+                                                <span class="invalid-feedback">
+                                                    <strong>{{ $errors->first('username') }}</strong>
+                                                </span>
+                                            @endif
+                                        </div>
+                                        <br>
+                                        <div class="input-group">
+                                            <input id="password" type="password" class="spl-input{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+                                            <label class="f-label spl-label">Password</label>
+                                             @if ($errors->has('password'))
+                                                <span class="invalid-feedback">
+                                                    <strong>{{ $errors->first('password') }}</strong>
+                                                </span>
+                                            @endif
+                                        </div>
+                                        <div class="actions clearfix mb-4">
+                                              <a href="{{ route('password.request') }}" class="pull-left" style="padding-left:0">Forgot password?</a>
+                                        </div>
+                                        <div class="input-group">
+                                            <!-- <button type="submit" class="btn btn-outline-success btn-block">{{ __('Login') }}</button> -->
+                                            <button  class="material-button btn-block b-success">{{ __('Login') }}</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+            </div>
+        </div>
+    </div>
             
-        <div class="container">
+        <!-- <div class="container">
             <div class="login-screen">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                      <form method="POST" action="{{ url('/') }}/">
@@ -58,14 +105,9 @@
                                         </div>
                                         <div class="actions clearfix">
                                               <a href="{{ route('password.request') }}" class="pull-left" style="padding-left:0">Forgot password?</a>
-                                            <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
-                                </button>
+                                            <button type="submit" class="btn btn-primary">{{ __('Login') }}</button>
                                         </div>
-                                       {{--  <div class="or"></div>
-                                        <div class="mt-4">
-                                            <a href="signup.html" class="additional-link">Don't have an Account? <span>Create Now</span></a>
-                                        </div> --}}
+                                      
                                     </div>
                                 </div>
                             </div>
@@ -73,11 +115,9 @@
                     </form>
                 </div>
             </div>
-        </div>
-     <footer class="main-footer no-bdr fixed-btm" style="margin-left:0">
-            <div class="container">
-                    BOOK KEEPING APPLICATION | YB FASHION ADOOR
-            </div>
-        </footer>
+        </div> -->
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="{{ asset('/assets/js/custom.js') }}"></script>
     </body>
 </html>

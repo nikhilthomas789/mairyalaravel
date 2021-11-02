@@ -21,9 +21,9 @@
 
     </head>  
 
-    <body class="login-bg">
-            
-        <div class="container">
+    <body>
+    
+    <div class="container">
             <div class="login-screen">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                       <form method="POST" action="{{ route('password.request') }}">
@@ -98,10 +98,8 @@
                 </div>
             </div>
         </div>
-        <footer class="main-footer no-bdr fixed-btm">
-            <div class="container">
-                SEO WORK MANAGEMENT APPLICATION
-            </div>
-        </footer>
+        
+            
+        
     </body>
 </html>
