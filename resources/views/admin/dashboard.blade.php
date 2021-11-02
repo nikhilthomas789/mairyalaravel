@@ -61,13 +61,13 @@
                   </div>
                </div>
             </header>
-            <div>
+            <div class="main-wrapper">
 
                @yield('content')
 
-               @include('admin.layout.footer')
+               
             </div>
-
+            @include('admin.layout.footer')
             
          </div>
 <!-- footer session starts-->
