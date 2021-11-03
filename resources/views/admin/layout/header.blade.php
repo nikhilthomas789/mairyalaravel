@@ -6,7 +6,7 @@
             <i class="icon-menu5"></i>
             </a>
             <a href="#app-side" data-toggle="onoffcanvas" class="onoffcanvas-toggler" aria-expanded="true">
-            <i class="icon-chevron-thin-left"></i>
+               <i class="icon-chevron-thin-left"></i>
             </a>
          </div>
          <!-- <div class="block">

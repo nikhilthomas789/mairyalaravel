@@ -22,6 +22,9 @@ if(count($menusrights)>0){
 
 <aside class="app-side" id="app-side">
    <div class="navigation">
+      <a href="#app-side" data-toggle="onoffcanvas" class="onoffcanvas-toggler d-xl-none d-lg-none d-md-none d-sm-block" aria-expanded="true">
+               <i class="icon-chevron-thin-left"></i>
+      </a>
       <div class="navigation-menu-tab">
          <button class="user-img">
             <img src="{{ asset('/assets/uploads/users/'.Auth::user()->icon)}}" alt="">

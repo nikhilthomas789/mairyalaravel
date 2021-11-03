@@ -1182,6 +1182,7 @@ form .f-.spl-label {
     background-color: var(--footer-bg);
     font-size: 13px;
     color: #333;
+    font-size: var(--base-font-size);
 }
 
 .main-footer.no-bdr {
@@ -1227,7 +1228,7 @@ form .f-.spl-label {
 
 @media (max-width: 992px) {
     .app-side {
-        left: -230px;
+        left: -300px;
     }
     .app-side.is-open {
         left: 0;
@@ -1979,7 +1980,7 @@ a.mini-nav-btn i {
 /*************** Toggle Sidebar ***************/
 
 a.onoffcanvas-toggler {
-    padding: 18px 20px 18px 5px;
+    padding: 20px 10px;
     display: inline-block;
     border-right: 1px solid #e1e5f1;
     display: none;
@@ -5646,6 +5647,7 @@ a.blog-sm p.blog-date:after {
 
 .breadcrumb .breadcrumb-item a {
     color: var(--orange);
+    font-size: var(--base-font-size);
 }
 
 .breadcrumb .breadcrumb-item a i {

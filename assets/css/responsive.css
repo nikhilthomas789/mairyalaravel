@@ -1,0 +1,125 @@
+@charset "utf-8";
+/* Extra Large Devices, Wide Screens */
+
+@media only screen and (min-width: 1601px) {
+
+}
+
+@media only screen and (min-width: 1401px) and (max-width: 1536px) {
+
+}
+
+@media (min-width: 1400px) and (max-width: 1680px) {
+}
+
+@media (min-width: 1282px) and (max-width: 1366px) {
+    
+}
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+/* Large devices (desktops, 992px and up) */
+
+@media (min-width: 1199px) and (max-width: 1281px) {
+
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    ul.user-navbar{
+        display: none !important;
+    }
+    .navigation .navigation-menu-tab{
+        display: none;
+    }
+    
+}
+
+/* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+}
+
+/* Small devices (landscape phones, less than 768px) */
+
+@media only screen and (max-width: 767px) {
+    ul.user-navbar{
+        display: none !important;
+    }
+    .navigation .navigation-menu-tab{
+        display: none;
+    }
+    .navigation{
+        width: auto;
+    }
+    .main-footer.fixed-btm{
+        z-index: 10;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    :root {
+        --paragraph-size: 13px;
+        --font-size-h1: 22px;
+        --font-size-h2: 20px;
+        --font-size-h3: 18px;
+        --font-size-h4: 16px;
+        --font-size-h5: 14px;
+        --font-size-h6: 13px;
+        --base-font-size: 12px;
+    }
+    .main-wrapper {
+        padding: 10px;
+        padding-bottom: 60px;
+        overflow: hidden;
+    }
+    .welcome-card{
+        width: 100%;
+    }
+    .welcome-card .left{
+        padding-left: 0;
+    }
+    .main-card ul li{
+        width: 100%;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    
+}
+
+/* ----------- iPad Pro ----------- */
+
+/* Portrait and Landscape */
+
+@media only screen and (min-width: 1024px) and (max-height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {}
+
+/* Portrait */
+
+@media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5) {}
+
+/* Landscape */
+
+@media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) {}

@@ -20,6 +20,7 @@
         <link rel="stylesheet" href="{{ asset('/assets/css/bootstrap.min.css') }}" />
 		<link rel="stylesheet" href="{{ asset('/assets/fonts/icomoon/icomoon.css') }}" />
 		<link rel="stylesheet" href="{{ asset('/assets/css/main.css') }}" />
+		<link rel="stylesheet" href="{{ asset('/assets/css/responsive.css') }}" />
 
 		<!-- Other CSS includes plugins - Cleanedup unnecessary CSS -->
 		<!-- Chartist css -->
