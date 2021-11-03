@@ -587,13 +587,13 @@ hr {
     font-size: 0.8rem;
     color: #aab3c3;
 }
-.page-title.with-breadcrumb{
+.page-title.with-breadcrumb {
     display: flex;
     justify-content: space-between;
     width: 100%;
     align-items: center;
 }
-.page-title.with-breadcrumb .breadcrumb{
+.page-title.with-breadcrumb .breadcrumb {
     margin: 0;
 }
 
@@ -1183,6 +1183,7 @@ form .f-.spl-label {
     font-size: 13px;
     color: #333;
     font-size: var(--base-font-size);
+    display: none;
 }
 
 .main-footer.no-bdr {
@@ -1489,7 +1490,7 @@ form .f-.spl-label {
     margin-top: 0;
 }
 
-.app-side.is-mini .side-nav li:hover .nav-title{
+.app-side.is-mini .side-nav ul li:hover .nav-title {
     display: block !important;
 }
 
@@ -6122,7 +6123,7 @@ gx-wrapper {
 }
 
 .welcome-card {
-    width: 74%;
+    width: 100%;
     float: left;
     padding: 20px;
     display: flex;
@@ -6258,6 +6259,31 @@ gx-wrapper {
     color: #ffb92c;
     box-shadow: 0px 0px 1px 1px #0000001a !important;
 }
+.main-card ul li:nth-child(4) a .right .icon {
+    background-color: rgb(115 255 51 / 30%);
+    color: #2ced09;
+    box-shadow: 0px 0px 1px 1px #0000001a !important;
+}
+.main-card ul li:nth-child(5) a .right .icon {
+    background-color: rgb(255 51 121 / 30%);
+    color: #ff2c97;
+    box-shadow: 0px 0px 1px 1px #0000001a !important;
+}
+.main-card ul li:nth-child(6) a .right .icon {
+    background-color: rgb(182 51 255 / 30%);
+    color: #cb2cff;
+    box-shadow: 0px 0px 1px 1px #0000001a !important;
+}
+.main-card ul li:nth-child(7) a .right .icon {
+    background-color: rgb(51 108 255 / 30%);
+    color: #2c77ff;
+    box-shadow: 0px 0px 1px 1px #0000001a !important;
+}
+.main-card ul li:nth-child(8) a .right .icon {
+    background-color: rgb(51 250 255 / 30%);
+    color: #0dd5cc;
+    box-shadow: 0px 0px 1px 1px #0000001a !important;
+}
 .main-card ul li:hover a .right .icon .fa {
     animation: zoomeffect 1s infinite;
     -webkit-animation: zoomeffect 1s infinite;
@@ -6283,20 +6309,179 @@ gx-wrapper {
 /* Main Body Ends */
 
 /* Header Section */
-ul.user-navbar{
+ul.user-navbar {
     display: flex;
     justify-content: flex-end;
     padding: 20px 15px;
 }
-ul.user-navbar svg{
+ul.user-navbar svg {
     cursor: pointer;
 }
-svg.minimize{
+svg.minimize {
     display: none;
 }
 /* Header Section Ends */
 
+/* Clock Section */
+.clock-wrapper{
+    position: relative;
+    left: 0;
+    width: 250px;
+    height: 250px;
+    margin: auto;
+    padding: 5px;
+    border-radius: 50%;
+
+}
+.clock-base{
+    width: 250px;
+    height: 250px;
+    background-color: var(--main-bg);
+    border-radius: 50%;
+    box-shadow: 0 0 5px var(--main-bg);
+}
+.clock-dial {
+    position: absolute;
+    z-index: 1;
+    top: 15px;
+    left: 15px;
+    width: 230px;
+    height: 230px;
+}
+.clock-dial .clock-indicator {
+    position: absolute;
+    width: 2px;
+    height: 4px;
+    margin: 113px 114px;
+    background-color: var(--orange);
+}
+.clock-indicator:nth-child(1) {
+    transform: rotate(30deg) translateY(-113px);
+}
+.clock-indicator:nth-child(2) {
+    transform: rotate(60deg) translateY(-113px);
+}
+.clock-indicator:nth-child(3) {
+    transform: rotate(90deg) translateY(-113px);
+    background-color: var(--orange);
+}
+.clock-indicator:nth-child(4) {
+    transform: rotate(120deg) translateY(-113px);
+}
+.clock-indicator:nth-child(5) {
+    transform: rotate(150deg) translateY(-113px);
+}
+.clock-indicator:nth-child(6) {
+    transform: rotate(180deg) translateY(-113px);
+    background-color: var(--orange);
+}
+.clock-indicator:nth-child(7) {
+    transform: rotate(210deg) translateY(-113px);
+}
+.clock-indicator:nth-child(8) {
+    transform: rotate(240deg) translateY(-113px);
+}
+.clock-indicator:nth-child(9) {
+    transform: rotate(270deg) translateY(-113px);
+    background-color: var(--orange);
+}
+.clock-indicator:nth-child(10) {
+    transform: rotate(300deg) translateY(-113px);
+}
+.clock-indicator:nth-child(11) {
+    transform: rotate(330deg) translateY(-113px);
+}
+.clock-indicator:nth-child(12) {
+    transform: rotate(360deg) translateY(-113px);
+    background-color: var(--orange);
+}
+.clock-hour{
+    position: absolute;
+    z-index: 2;
+    top: 80px;
+    left: 128px;
+    width: 4px;
+    height: 65px;
+    background-color: #555;
+    border-radius: 2px;
+    box-shadow: 0 0 2px rgba(0,0,0,.2) !important;
+    transform-origin: 2px 50px;
+    transition: .5s;
+    -webkit-animation: rotate-hour 43200s linear infinite;
+    -moz-animation: rotate-hour 43200s linear infinite;
+}
+.clock-minute{
+    position: absolute;
+    z-index: 3;
+    top: 60px;
+    left: 128px;
+    width: 4px;
+    height: 85px;
+    background-color: var(--black);
+    border-radius: 2px;
+    box-shadow: 0 0 2px rgba(0,0,0,.2);
+    transform-origin: 2px 70px;
+    transition: .5s;
+    -webkit-animation: rotate-minute 3600s linear infinite;
+    -moz-animation: rotate-minute 3600s linear infinite;
+}
+.clock-second{
+    position: absolute;
+    z-index: 4;
+    top: 20px;
+    left: 129px;
+    width: 2px;
+    height: 130px;
+    background-color: var(--orange);
+    box-shadow: 0 0 2px rgba(0,0,0,.2) !important;
+    transform-origin: 1px 110px;
+    transition: .5s;
+    -webkit-animation: rotate-second 60s linear infinite;
+    -moz-animation: rotate-second 60s linear infinite;
+}
+.clock-second:after{
+    content: "";
+    display: block;
+    position: absolute;
+    left: -4px;
+    bottom: 14px;
+    width: 8px;
+    height: 8px;
+    background-color: var(--orange);
+    border: solid 2px var(--orange);
+    border-radius: 50%;
+    box-shadow: 0 0 3px rgba(0,0,0,.2);
+}
+.clock-center{
+    position: absolute;
+    z-index: 1;
+    width: 150px;
+    height: 150px;
+    top: 55px;
+    left: 55px;
+    background-image: linear-gradient(#fff, #fff);
+    border-radius: 50%;
+    box-shadow: inset 0 -1px 0 #fafafa, inset 0 1px 0 #e3e3e3;
+}
+.clock-center:after{
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin: 65px;
+    background-color: var(--main-bg);
+    border-radius: 50%;
+}
+/* Clock Section Ends */
+
 /* Table */
-div.dataTables_wrapper div.dataTables_info{
+div.dataTables_wrapper div.dataTables_info {
     color: var(--orange) !important;
 }
+
+
+/* Canvas Js */
+.canvasjs-chart-credit{
+    display: none !important;
+}
+/* Canvas Js Ends */
