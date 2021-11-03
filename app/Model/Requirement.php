@@ -4,7 +4,7 @@ namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Head extends Model
+class Requirement extends Model
 {
-    protected $table = 'head';
+    protected $table = 'requirement';
 }

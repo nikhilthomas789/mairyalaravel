@@ -58,9 +58,9 @@
 					<a href="#">
 						<div class="left">
 							<p class="name">
-								Head
+								Requirements
 							</p>
-							<h1>{{$data['headcount']}}</h1>
+							<h1>{{$data['reqcount']}}</h1>
 						</div>
 						<div class="right">
 							<div class="icon">
@@ -75,34 +75,7 @@
 		</div>
 	</div>
 
-    <!-- <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col">
-        <a href="#" class="block-140">
-            <div class="icon">
-                <i class="fa fa-users fa-fw"></i>
-            </div>
-            <h1>{{$data['usergroupcount']}}</h1>
-            <p>Usergroup</p>
-        </a>
-    </div>
-    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col">
-        <a href="#" class="block-140">
-            <div class="icon">
-                <i class="fa fa-user fa-fw"></i>
-            </div>
-            <h1>{{$data['usercount']}}</h1>
-            <p>Users</p>
-        </a>
-    </div>
-
-    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col">
-        <a href="#" class="block-140">
-            <div class="icon">
-                <i class="fa fa-weixin fa-fw"></i>
-            </div>
-            <h1>{{$data['headcount']}}</h1>
-            <p>Head</p>
-        </a>
-    </div> -->
+ 
 </div>
 
 

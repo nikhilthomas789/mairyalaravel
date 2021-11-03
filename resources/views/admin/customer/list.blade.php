@@ -22,16 +22,14 @@
 <div class="row gutters">
    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
       <div class="card">
-         <div class="card-header">Creditors List <a class="btn btn-outline-primary pull-right btn-sm" href='{{ url('/admin/creditors/create/')}}'>Add new</a></div>
+         <div class="card-header">Customers List <a class="btn btn-outline-primary pull-right btn-sm" href='{{ url('/admin/customer/create/')}}'>Add new</a></div>
          <div class="card-body table-responsive">
             <table id="basicExample" class="table table-striped table-bordered">
                <thead>
                   <tr>
                      <th>Sl.no</th>
                      <th>Party Name</th>
-                     <th>Phone</th>
-                     <th>Discount</th>
-                     <th>Head</th>
+                     <th>Mobile</th>
                        <th>Created by</th>
                      <th>Status</th>
                      <th>Edit</th>
@@ -46,9 +44,7 @@
                   <tr class="text-center">
                      <td >{{$i}}</td>
                      <td>{{$value->name}}</td>
-                     <td>{{$value->phone}}</td>
-                     <td>{{$value->discount}}</td>
-                     <td>{{$value->catname}}</td>
+                     <td>{{$value->mobile}}</td>
 
                        <td>{{Auth::user()->name}}</td>
                 

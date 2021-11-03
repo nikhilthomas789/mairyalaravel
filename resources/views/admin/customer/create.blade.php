@@ -17,7 +17,7 @@
 
 <div class="col-md-12 col-sm-12">
   <div class="card">
-     <div class="card-header">Add Customer <a class="btn btn-outline-primary pull-right btn-sm" href='{{ url('/admin/creditors/list/')}}'>List all</a></div>
+     <div class="card-header">Add Customer <a class="btn btn-outline-primary pull-right btn-sm" href='{{ url('/admin/customer/list/')}}'>List all</a></div>
      <div class="card-body">
 
         {{ Form::open(['novalidate','enctype'=>'multipart/form-data']) }}
@@ -58,7 +58,7 @@
       <div class="col-md-6 col-sm-6">
         <div class="form-group">
            {{ Form::label('required_language', 'Required language') }}
-           {!! Form::text('required_language',$datas->required_language,[ 'class'=>'form-control','required']);!!}
+           {!! Form::text('required_language',$datas->required_language,['data-role'=>'tagsinput', 'class'=>'form-control','required']);!!}
           @if ($errors->has('required_language'))
         <p style="color:#F55D7A">{{ $errors->first('required_language') }}</p>
         @endif
@@ -69,15 +69,32 @@
 
          <div class="col-md-6 col-sm-6">
         <div class="form-group">
-           {{ Form::label('requirement_type', 'Requirement type') }}
-            <select  class="form-control" name="requirement_type" {{ (isset($id)) ? 'disabled' : '' }}>
+           {{ Form::label('requirement', 'Requirement') }}
+            <select  class="form-control" name="requirement" {{ (isset($id)) ? 'disabled' : '' }}>
                   <option value="">Select Requirement</option>
-                  @foreach ($head as $item)
-                  <option value="{{$item->id}}" {{ old('model') == $item->id ? "selected" : "" }} {{$datas->head_id==$item->id?'selected':''}}>{{$item->name}}</option>
+                  @foreach ($requirement as $item)
+                  <option value="{{$item->id}}" {{ old('model') == $item->id ? "selected" : "" }} {{$datas->requirement_type_id==$item->id?'selected':''}}>{{$item->name}}</option>
                     
                   @endforeach
                 
                </select> 
+
+          @if ($errors->has('requirement'))
+        <p style="color:#F55D7A">{{ $errors->first('requirement') }}</p>
+        @endif
+        </div>
+      </div>
+
+
+
+      <div class="col-md-6 col-sm-6">
+        <div class="form-group">
+           {{ Form::label('requirement_type', 'Requirement type') }}
+           <select  class="form-control" name="requirement_type">
+                  <option value="">Select Requirement type</option>
+                  <option {{ old('requirement_type') == 'SD' ? "selected" : "" }} value="SD" {{ $datas->requirement_type == 'SD' ? 'selected' : '' }}>SD</option>
+                   <option value="GT" {{ old('requirement_type') == 'GT' ? "selected" : "" }} {{ $datas->requirement_type == 'GT' ? 'selected' : '' }}>GT</option>
+           </select> 
 
           @if ($errors->has('requirement_type'))
         <p style="color:#F55D7A">{{ $errors->first('requirement_type') }}</p>
@@ -94,6 +111,17 @@
         @endif
         </div>
       </div>
+
+      <div class="col-md-6 col-sm-6">
+        <div class="form-group">
+           {{ Form::label('rate_quoted', 'Rate quoted') }}
+           {!! Form::text('rate_quoted',$datas->rate_quoted,[ 'class'=>'form-control','required']);!!}
+          @if ($errors->has('rate_quoted'))
+        <p style="color:#F55D7A">{{ $errors->first('rate_quoted') }}</p>
+        @endif
+        </div>
+      </div>
+
 
 
       <div class="col-md-12 col-sm-12">
@@ -122,16 +150,7 @@
             
             </div>
          </div>
-             <div class="col-md-6 col-sm-6">
-        <div class="form-group">
-           {{ Form::label('rate_quoted', 'Rate quoted') }}
-           {!! Form::text('rate_quoted',$datas->rate_quoted,[ 'class'=>'form-control','required']);!!}
-          @if ($errors->has('rate_quoted'))
-        <p style="color:#F55D7A">{{ $errors->first('rate_quoted') }}</p>
-        @endif
-        </div>
-      </div>
-
+             
 
 
           <div class="col-md-6 col-sm-6">

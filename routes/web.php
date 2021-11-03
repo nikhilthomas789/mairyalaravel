@@ -112,13 +112,13 @@ Route::post('/client/create','admin\ClientController@create')->name("Client");
 
 
 /*Video */
-Route::get('/head/create','admin\HeadController@create')->name("Head");
-Route::get('/head/create/{id}','admin\HeadController@create')->name("Head");
-Route::get('/head/list','admin\HeadController@list')->name("Head");
-Route::get('/head/status/{id}','admin\HeadController@status')->name("Head");
-Route::get('/head/delete/{id}','admin\HeadController@delete')->name("Head");
-Route::post('/head/create/{id}','admin\HeadController@create')->name("Head");
-Route::post('/head/create','admin\HeadController@create')->name("Head");
+Route::get('/requirement/create','admin\RequirementController@create')->name("Requirement");
+Route::get('/requirement/create/{id}','admin\RequirementController@create')->name("Requirement");
+Route::get('/requirement/list','admin\RequirementController@list')->name("Requirement");
+Route::get('/requirement/status/{id}','admin\RequirementController@status')->name("Requirement");
+Route::get('/requirement/delete/{id}','admin\RequirementController@delete')->name("Requirement");
+Route::post('/requirement/create/{id}','admin\RequirementController@create')->name("Requirement");
+Route::post('/requirement/create','admin\RequirementController@create')->name("Requirement");
 
 
 

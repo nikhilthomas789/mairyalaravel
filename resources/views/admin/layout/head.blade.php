@@ -30,7 +30,7 @@
 		<!-- fonds-->
 
 		
-
+<link rel="stylesheet" href="https://bootstrap-tagsinput.github.io/bootstrap-tagsinput/dist/bootstrap-tagsinput.css" />
 
 
 		<!-- Data Tables -->

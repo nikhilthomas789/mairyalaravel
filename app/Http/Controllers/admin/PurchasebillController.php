@@ -53,29 +53,13 @@ class PurchasebillController extends BaseController
         return view('admin.purchasebill.create')->with('datas',$purchasebill);
     }
 
-    public function list($id=null){
+    public function list(){
 
-     $creditors=Creditors::get(['id','name']);
-
-      if($id)
-      {
         $data = DB::table('purchase')
             ->join('creditors', 'purchase.party_id', '=', 'creditors.id')
-             ->join('head', 'head.id', '=', 'creditors.head_id')
-            ->select('purchase.*', 'creditors.name as partynamename','head.name as headname')->where('party_id',$id)->get();
-      }
-      else
-      {
-        $data = DB::table('purchase')
-            ->join('creditors', 'purchase.party_id', '=', 'creditors.id')
-            ->join('head', 'head.id', '=', 'creditors.head_id')
-            ->select('purchase.*', 'creditors.name as partynamename','head.name as headname')->get();
-      }
+            ->select('purchase.*', 'creditors.name as partynamename'  )->get();
       
-      
-
-       
-            return view('admin.purchasebill.list',['creditors'=>$creditors,'data'=>$data]);
+            return view('admin.purchasebill.list',['data'=>$data]);
 
 
     }

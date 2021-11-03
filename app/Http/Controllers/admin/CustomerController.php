@@ -8,7 +8,7 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
-use App\Model\Head;
+use App\Model\Requirement;
 use App\Model\Customer;
 use App\Http\Controllers\admin\ImagecropperController;
 use DB;
@@ -37,22 +37,19 @@ class CustomerController extends BaseController
           'place'=>'required',
           'required_language'=>'required',
           'requirement_type'=>'required',
+          'requirement'=>'required',
           'required_date'=>'required',
-          'name'=>'required',
-          'name'=>'required',
-          'name'=>'required',
-          'name'=>'required',
-          'name'=>'required',
-          'name'=>'required',
-          'discount'=>'required|numeric',
-          'address'=>'required',
+          'family_members'=>'required',
+          'summary_requirement'=>'required',
+          'rate_quoted'=>'required',
+          'followup_date'=>'required',
           
         ]);
        
        
         $customer->head_id=$data['head'];
         $customer->name=$data['name'];
-        $customer->phone=$request['phone'];
+        $customer->mobile=$request['mobile'];
         $customer->discount=$request['discount'];
         $customer->address = $request['address'];
         $customer->status = 1;
@@ -61,20 +58,12 @@ class CustomerController extends BaseController
         $request->session()->flash('success',$message);
       }
 
-        $head=Head::get(['id','name']);
-        return view('admin.customer.create',['head'=>$head])->with('datas',$customer);
+        $requirement=Requirement::get(['id','name']);
+        return view('admin.customer.create',['requirement'=>$requirement])->with('datas',$customer);
     }
 
     public function list(){
-
-    /*  $data=Backlinks::get();*/
-      
-
-
-      $data = DB::table('customer')
-            ->join('head', 'customer.head_id', '=', 'head.id')
-            ->select('customer.*', 'head.name as catname')
-            ->get();
+      $data = DB::table('customer')->get();
             return view('admin.customer.list',['data'=>$data]);
 
 

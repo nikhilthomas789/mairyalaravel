@@ -230,6 +230,8 @@ var man_id=$("#manufacturer").val();
 CKEditor.replace(textarea);
 </script> -->
 
+<script src="https://bootstrap-tagsinput.github.io/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
+
 <script src="{{ asset('/assets/js/custom.js') }}"></script>
 
 
