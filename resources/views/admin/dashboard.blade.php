@@ -85,40 +85,7 @@
 <!-- All scripts here-->
       @include('admin.layout.scripts')
       
-      <script>
-         var elem = document.getElementById("body");
-
-         function openFullscreen() {
-            if (elem.requestFullscreen) {
-                  elem.requestFullscreen();
-            } else if (elem.webkitRequestFullscreen) { /* Safari */
-                  elem.webkitRequestFullscreen();
-            } else if (elem.msRequestFullscreen) { /* IE11 */
-                  elem.msRequestFullscreen();
-            }
-         }
-
-         function closeFullscreen() {
-            if (document.exitFullscreen) {
-               document.exitFullscreen();
-            } else if (document.webkitExitFullscreen) { /* Safari */
-               document.webkitExitFullscreen();
-            } else if (document.msExitFullscreen) { /* IE11 */
-               document.msExitFullscreen();
-            }
-         }
-         
-         $(document).ready(function(){
-            $(".maximize").click(function(){
-               $(".maximize").hide();
-               $(".minimize").show();
-            });
-            $(".minimize").click(function(){
-               $(".minimize").hide();
-               $(".maximize").show();
-            });
-         });
-      </script>
+      
 
    </body>
    
