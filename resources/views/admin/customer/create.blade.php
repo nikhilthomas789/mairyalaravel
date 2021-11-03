@@ -58,6 +58,7 @@
       <div class="col-md-6 col-sm-6">
         <div class="form-group">
            {{ Form::label('required_language', 'Required language') }}
+           <br>
            {!! Form::text('required_language',$datas->required_language,['data-role'=>'tagsinput', 'class'=>'form-control','required']);!!}
           @if ($errors->has('required_language'))
         <p style="color:#F55D7A">{{ $errors->first('required_language') }}</p>

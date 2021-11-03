@@ -6485,3 +6485,21 @@ div.dataTables_wrapper div.dataTables_info {
     display: none !important;
 }
 /* Canvas Js Ends */
+
+/* Bootstrap Tags Input */
+.bootstrap-tagsinput{
+    width: 100% !important;
+}
+.bootstrap-tagsinput .label-info{
+    background-color: var(--orange);
+}
+.bootstrap-tagsinput .label{
+    padding: 0.2em .6em .3em;
+    font-size:75%;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+/* Bootstrap Tags Input Ends*/
