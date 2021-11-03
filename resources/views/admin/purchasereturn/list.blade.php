@@ -27,7 +27,7 @@
             <table id="basicExample" class="table table-striped table-bordered">
                <thead>
                   <tr>
-                     <th>Sl.no</th>
+                     <th style="width:50px">Sl.no</th>
                      <th>Party</th>
                      <th>Invoice Date</th>
                      <th>Invoice No</th>
@@ -35,8 +35,8 @@
                      <th>Created date</th>
                      <th>Created by</th>
                    
-                     <th>Edit</th>
-                     <th>Delete</th>
+                     <th style="width:50px">Edit</th>
+                     <th style="width:50px">Delete</th>
                   </tr>
                </thead>
                <tbody>

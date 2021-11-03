@@ -15,7 +15,15 @@
             </a>
          </div> -->
          <div class="block " style="float: right;flex: 1;">
-            <ul class="header-actions">
+
+            <ul class="user-navbar">
+               <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" onclick="openFullscreen();" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-maximize maximize"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" onclick="closeFullscreen();" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minimize minimize"><path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"></path></svg>
+               </li>
+            </ul>
+
+            <ul class="header-actions d-lg-none d-sm-block">
                <li class="dropdown">
                   <a href="#" id="userSettings" class="user-settings" data-toggle="dropdown" aria-haspopup="true">
                   <img class="avatar" src="{{ asset('/assets/uploads/users/'.Auth::user()->icon)}}" alt="User Thumb" />
@@ -59,3 +67,4 @@
       </div>
    </div>
 </header>
+
