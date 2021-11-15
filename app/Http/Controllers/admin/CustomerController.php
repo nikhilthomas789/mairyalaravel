@@ -30,6 +30,8 @@ class CustomerController extends BaseController
         $message="customer added successfully";
       }
      // $id = $request->get('id');
+
+
       if ($request->isMethod('post')) {
         $data=$request->validate([
           'name'=>'required',
@@ -46,12 +48,23 @@ class CustomerController extends BaseController
           
         ]);
        
-       
-        $customer->head_id=$data['head'];
         $customer->name=$data['name'];
         $customer->mobile=$request['mobile'];
-        $customer->discount=$request['discount'];
-        $customer->address = $request['address'];
+        $customer->place=$request['place'];
+        $customer->required_language=json_encode($request['required_language']);
+        $customer->requirement_type=$request['requirement_type'];
+        $customer->requirement_id=$request['requirement'];
+
+        $old_date_timestamp = strtotime($request['required_date']);
+
+        $customer->required_date = date('Y-m-d H:i:s', $old_date_timestamp); 
+        $customer->family_members = $request['family_members'];
+        $customer->summary_requirement = $request['summary_requirement'];
+        $customer->rate_quoted = $request['rate_quoted'];
+
+        $old_date_timestamps = strtotime($request['followup_date']);
+
+        $customer->followup_date = date('Y-m-d H:i:s', $old_date_timestamps); 
         $customer->status = 1;
         
         $customer->save();
@@ -59,14 +72,46 @@ class CustomerController extends BaseController
       }
 
         $requirement=Requirement::get(['id','name']);
-        return view('admin.customer.create',['requirement'=>$requirement])->with('datas',$customer);
+
+        $language = DB::table('language')->get();
+
+
+        $lang=[];
+        $lang = json_decode($customer->required_language);
+
+     
+    
+
+        return view('admin.customer.create',['language'=>$language,'lang'=>$lang,'requirement'=>$requirement])->with('datas',$customer);
     }
 
     public function list(){
-      $data = DB::table('customer')->get();
+
+
+      $data = DB::table('customer')
+            ->join('requirement', 'customer.requirement_id', '=', 'requirement.id')
+            ->select('customer.*', 'requirement.name as reqname')
+            ->get();
+
+
+      //$data = DB::table('customer')->get();
             return view('admin.customer.list',['data'=>$data]);
 
 
+    }
+
+
+    public function view($id)
+    {
+
+          $data = DB::table('customer')
+            ->join('requirement', 'customer.requirement_id', '=', 'requirement.id')
+            ->select('customer.*', 'requirement.name as reqname')
+            ->where('customer.id',$id)
+            ->get();
+
+
+      return view("admin.customer.view",["data"=>$data]);
     }
 
        public function status(Request $request,$id)

@@ -1,9 +1,14 @@
+
+
+
 <!-- jQuery first, then Tether, then other JS. -->
 <script src="{{ asset('/assets/js/jquery.js') }}"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
 <script>
+//$('select').selectpicker();
+
 
 flatpickr('.flatpickr', {
   dateFormat: "d-m-Y"
@@ -416,3 +421,18 @@ var chart1 = new CanvasJS.Chart("chartContainer1", {
         chart2.render();
 
 </script>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css" />
+
+  <script type="text/javascript">
+     $('.select-tag').multiselect({
+  nonSelectedText: 'Select',
+  enableFiltering: true,
+  enableCaseInsensitiveFiltering: true,
+  buttonWidth:'400px'
+ });
+ 
+  </script>

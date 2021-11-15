@@ -60,6 +60,19 @@ Route::post('/customer/create/{id}','admin\CustomerController@create')->name("Cu
 Route::get('/customer/list','admin\CustomerController@list')->name("Customer");
 Route::get('/customer/status/{id}','admin\CustomerController@status')->name("Customer");
 Route::get('/customer/delete/{id}','admin\CustomerController@delete')->name("Customer");
+Route::get('/customer/view/{id}','admin\CustomerController@view')->name("Customer");
+
+
+
+/*Staff */
+Route::post('/staff/create','admin\StaffController@create')->name("Staff");
+Route::get('/staff/create','admin\StaffController@create')->name("Staff");
+Route::get('/staff/create/{id}','admin\StaffController@create')->name("Staff");
+Route::post('/staff/create/{id}','admin\StaffController@create')->name("Staff");
+Route::get('/staff/list','admin\StaffController@list')->name("Staff");
+Route::get('/staff/status/{id}','admin\StaffController@status')->name("Staff");
+Route::get('/staff/delete/{id}','admin\StaffController@delete')->name("Staff");
+Route::get('/staff/view/{id}','admin\StaffController@view')->name("Staff");
 
 
 

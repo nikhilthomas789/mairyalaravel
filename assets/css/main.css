@@ -6502,4 +6502,39 @@ div.dataTables_wrapper div.dataTables_info {
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
 }
+
+
+/* Multiselect Starts*/
+.btn-group{
+    width: 100% !important;
+}
+.multiselect.btn.btn-default{
+    width: 100% !important;
+    background-color: transparent !important;
+    text-align: left;
+    font-size: 1rem;
+    padding: 5px 5px 5px 5px !important;
+    display: block;
+    width: 100%;
+    border: none;
+    border: 1px solid #d4d4d4 !important;
+    border-radius: 5px;
+    overflow: hidden;
+    height: auto !important;
+    margin-bottom: 10px;
+}
+.multiselect-selected-text{
+        font-weight: 400;
+    font-size: 14px;
+    color: #595f66;
+    padding-left: 4px;
+}
+.dropdown-toggle::after{
+    position: absolute;
+    right: 5px;
+    top: 15px;
+}
+.multiselect-container.dropdown-menu.show{
+    width: 100% !important;
+}
 /* Bootstrap Tags Input Ends*/

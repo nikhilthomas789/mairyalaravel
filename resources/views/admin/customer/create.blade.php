@@ -38,7 +38,7 @@
       <div class="col-md-6 col-sm-6">
         <div class="form-group">
            {{ Form::label('mobile', 'Mobile') }}
-           {!! Form::text('namobileme',$datas->mobile,[ 'class'=>'form-control','required']);!!}
+           {!! Form::text('mobile',$datas->mobile,[ 'class'=>'form-control','required']);!!}
           @if ($errors->has('mobile'))
         <p style="color:#F55D7A">{{ $errors->first('mobile') }}</p>
         @endif
@@ -58,13 +58,19 @@
       <div class="col-md-6 col-sm-6">
         <div class="form-group">
            {{ Form::label('required_language', 'Required language') }}
-           <br>
-           {!! Form::text('required_language',$datas->required_language,['data-role'=>'tagsinput', 'class'=>'form-control','required']);!!}
+
+            <select name="required_language[]" class="form-control select-tag" multiple id="framework">
+              @foreach($language as $tag)
+                <option value="{{$tag->name}}" {{in_array($tag->name, old("required_language") ?: []) ? "selected": ""}} @if($lang!=null)@foreach ($lang as $vals)   @if($vals==$tag->name)selected @endif  @endforeach @endif>{{$tag->name}}</option>
+              @endforeach
+            </select>
+
+
           @if ($errors->has('required_language'))
         <p style="color:#F55D7A">{{ $errors->first('required_language') }}</p>
         @endif
         </div>
-      </div> 
+      </div>
 
 
 
@@ -74,7 +80,7 @@
             <select  class="form-control" name="requirement" {{ (isset($id)) ? 'disabled' : '' }}>
                   <option value="">Select Requirement</option>
                   @foreach ($requirement as $item)
-                  <option value="{{$item->id}}" {{ old('model') == $item->id ? "selected" : "" }} {{$datas->requirement_type_id==$item->id?'selected':''}}>{{$item->name}}</option>
+                  <option value="{{$item->id}}" {{ old('model') == $item->id ? "selected" : "" }} {{$datas->requirement_id==$item->id?'selected':''}}>{{$item->name}}</option>
                     
                   @endforeach
                 
@@ -128,7 +134,7 @@
       <div class="col-md-12 col-sm-12">
             <div class="form-group">
                {{ Form::label('family_members', 'Details of other family members') }}
-            {{ Form::textarea('family_members',$datas->message, ['class' => 'form-control']) }}
+            {{ Form::textarea('family_members',$datas->family_members, ['class' => 'form-control']) }}
 
             @if ($errors->has('family_members'))
             <p style="color:#F55D7A">{{ $errors->first('family_members') }}</p>
@@ -143,7 +149,7 @@
          <div class="col-md-12 col-sm-12">
             <div class="form-group">
                {{ Form::label('summary_requirement', 'Summary of requirement') }}
-            {{ Form::textarea('summary_requirement',$datas->message, ['class' => 'form-control']) }}
+            {{ Form::textarea('summary_requirement',$datas->summary_requirement, ['class' => 'form-control']) }}
 
             @if ($errors->has('summary_requirement'))
             <p style="color:#F55D7A">{{ $errors->first('summary_requirement') }}</p>

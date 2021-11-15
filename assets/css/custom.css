@@ -9,6 +9,17 @@
     padding: 3px;
     text-align: center;
 }
+
+.iconwhatsapp
+{
+     background-color: #25d366;
+    border-radius: 4px;
+    color: white;
+    width: 36px;
+    height: 20px;
+    padding: 3px;
+    text-align: center;
+}
 .iconinactive
 {
 	background-color: #e02c2c;

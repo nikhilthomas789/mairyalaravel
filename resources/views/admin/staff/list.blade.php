@@ -22,7 +22,7 @@
 <div class="row gutters">
    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
       <div class="card">
-         <div class="card-header">Customers List <a class="btn btn-outline-primary pull-right btn-sm" href='{{ url('/admin/customer/create/')}}'>Add new</a></div>
+         <div class="card-header">Staff List <a class="btn btn-outline-primary pull-right btn-sm" href='{{ url('/admin/staff/create/')}}'>Add new</a></div>
          <div class="card-body table-responsive">
             <table id="basicExample" class="table table-striped table-bordered">
                <thead>
@@ -50,8 +50,8 @@
                      <td>{{$value->name}}</td>
                      <td>{{$value->mobile}}</td>
                      <td>{{$value->place}}</td>   
-                     <td>{{$value->required_language}}</td>  
-                     <td>{{$value->reqname}}</td>   
+                     <td></td>  
+                     <td></td>   
 
 
                       @if($value->status=="1")
